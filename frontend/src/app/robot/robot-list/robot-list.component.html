@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Robots</h1>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary" (click)="redirectNewRobotPage()">New Robot</button>
+            </div>
+          </div>
+
+        </header>
+      </section>
+     
+
+      <section class="main">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let robot of robots">
+            <th scope="row">{{robot.id}}</th>
+            <td>{{robot.name}}</td>
+            <td>
+              <button type="button" class="btn btn-success" (click)="editRobotPage(robot)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="deleteRobot(robot)">Delete</button>
+            
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

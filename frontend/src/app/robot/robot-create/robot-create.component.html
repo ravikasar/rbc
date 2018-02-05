@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <form novalidate [formGroup]="robotForm" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="name">
+            </div>
+            </fieldset>
+
+          <button type="submit" class="btn btn-primary"  [disabled]="!robotForm.valid" >Submit</button>
+          <button type="button" class="btn btn-warning" (click)="redirectRobotPage()">Cancel</button>
+          <pre>{{robotForm.value | json}}</pre>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
