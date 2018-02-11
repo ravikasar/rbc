@@ -1,14 +1,14 @@
 package com.rbc.robot;
 
-import com.rbc.robot.entity.Robot;
-import com.rbc.robot.repo.*;
-
 import java.util.stream.Stream;
 
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import com.rbc.robot.entity.Robot;
+import com.rbc.robot.repo.RobotRepository;
 
 @SpringBootApplication
 public class RbcSpringBoot2JpaWithHibernateAndH2Application {

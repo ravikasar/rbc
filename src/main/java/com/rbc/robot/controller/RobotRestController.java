@@ -1,6 +1,7 @@
 package com.rbc.robot.controller;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -35,6 +36,12 @@ public class RobotRestController {
 		return robot;
 	}
 
+	@RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
+	public Collection<Robot> getRobotByName(@PathVariable("name") String name) {
+		List<Robot> robots = repository.getByName(name);
+		return robots;
+	}
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public Robot saveRobot(@RequestBody Robot robot) {
 		repository.saveAndFlush(robot);
