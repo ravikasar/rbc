@@ -1,0 +1,10 @@
+To run the app
+step 1 : cd frontend && npm_install --This will install the required angular modules
+step 2 : cd .. && mvn -f pom_jsp.xml spring-boot:run
+
+To access in JSP mode
+http://localhost:8080
+
+To access in Typescript mode
+http://localhost:4200
+
